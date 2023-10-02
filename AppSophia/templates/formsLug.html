@@ -1,0 +1,26 @@
+<h1>{{ action }} Lugares</h1>
+
+<form method="post">
+  {% csrf_token %} 
+  <div>
+    <label>Cidade:</label>
+    <input name="cidade" value="{{lugar.cidade}}">
+  </div>
+
+  <div>
+    <label>País:</label>
+    <input name="pais" value="{{lugar.pais}}">
+  </div>
+
+  <div>
+    <label>Continente:</label>
+    <input name="continente" value="{{lugar.continente}}">
+  </div>
+
+  <div>
+    <label>Clima:</label>
+    <input name="clima" value="{{lugar.clima}}">
+  </div>
+  <input type="submit" value="Registrar">
+</form>
+

@@ -1,0 +1,25 @@
+<h1>{{ action }}  lugar e artefato importante</h1>
+
+<form method="post">
+  {% csrf_token %} 
+  <div>
+    <label>Cidade:</label>
+    <input name="cidade" value="{{coisa.cidade}}">
+  </div>
+
+  <div>
+    <label>Artefato:</label>
+    <input name="artefato" value="{{coisa.artefato}}">
+  </div>
+
+  <div>
+    <label>Importancia:</label>
+    <input name="importancia" value="{{coisa.importancia}}">
+  </div>
+
+  <div>
+    <label>Preço:</label>
+    <input type="number" name="preco" value="{{coisa.preco}}">
+  </div>
+  <input type="submit" value="Registrar">
+</form>

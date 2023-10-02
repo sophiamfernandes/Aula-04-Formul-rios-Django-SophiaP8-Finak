@@ -1,0 +1,63 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Sophia Pucinni Mello Fernandes</title>
+  <link href="{% static 'style.css' %}" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h1>Sophia Puccinni Mello Fernandes</h1>
+  <h1><u style="color: deeppink;"> Top 3 viagens para fazer na América do Sul:</u></h1>
+  <h2><b>  lugares que me marcaram e vale apena conhecer.</b></h2>
+  <p style="text-align: justify;"><b>1.<u><span style="color:deeppink"> GALÁPAGOS</span></b></u> um destino pouco conveniente que é de tirar o folego. Um arquipélago de ilhas pouco povoada com uma natureza exuberante e fauna marinha riquíssima. Para quem gosta de natureza é um ótimo destino com paisagens de vulcões, praias e florestas. Lá você terá a oportunidade de conhecer animais exóticos e vivênciar belas paisagens, além de ser um lugar de boas ondas para quem busca um surf. </p>
+  
+  <div><img src="https://classic.exame.com/wp-content/uploads/2022/01/leao-marinho-nas-Ilhas-Galapagos-no-Equador.jpg?quality=70&strip=info&w=509">
+    <img src="https://www.minasjr.com.br/wp-content/uploads/2018/07/photo-1503301360699-4f60cf292ec8.jpg" width=400>
+</div>
+  
+  <p style="text-align: justify;"><b>2.<u><span style="color:deeppink"> DESERTO DO ATACAMA:</span></u></b> um lugar com paisagens surpreendentes. O deserto mais seco do mundo é um lugar único e diferente de qualquer outro lugar do planeta. Lá você verá piscinas naturais no meio do deserto, deserto de sal e diversas lagunas.</p>
+<div>
+   <img src="https://r5j2d2t3.rocketcdn.me/wp-content/uploads/2019/02/lagunas-escondidas-baltinache-atacama-deserto-chile-009.jpg" width="500">
+  <img src="https://cdn6.campograndenews.com.br/uploads/noticias/2023/03/15/21fe50ac0d2bcdce77aa4bf71bcd80074dfbaa9d.jpeg" width="500">
+ </div>
+  <p style="text-align: justify;"><b>3.<u><span style="color:deeppink"> CHICAMA :</span></u></b> localizado no Perú, é um destino bom para quem gosta da prática do surf. Diversas praias com ondas para todo os níveis de surf, além de ter a onda mais longa do mundo, podendo surfa-la por mais de um minuto.   </p>
+<div>
+   <img src="https://i.pinimg.com/originals/7a/d6/e2/7ad6e2af78283f1857f3195a0c858f7a.png" width="500">
+  <img src="https://st3.depositphotos.com/6878246/18723/i/450/depositphotos_187235294-stock-photo-cliffs-by-the-sea-on.jpg" width="500">
+  
+<h2> <i> Lugares que eu não fui e tenho vontade:</i></h2>
+
+  <ol>
+    {% for lugar in lugares %}
+    <li>
+      {{ lugar.cidade }}
+      <a href="/lugares/update/{{lugar.id}}">Atualizar</a>
+      <a href="/lugares/delete/{{lugar.id}}">Remover</a>
+    </li>
+    {% endfor %}
+  </ol>
+<a href="/lugares">Adicionar Novo Lugar</a>
+<h2><i>Coisas que são essenciais levar para esses destinos:</i></h2>
+
+  <ul>
+    {% for coisa in coisasEssencias %}
+    <li>
+      {{ coisa.cidade }}
+      <a href="/coisasEssencias/update/{{coisa.id}}">Atualizar</a>
+      <a href="/coisasEssencias/delete/{{coisa.id}}">Remover</a>
+    </li>
+    {% endfor %}
+  </ul>
+  <a href="/coisasEssencias">Adicionar novo lugar e artefato</a>
+<h2> Video legais para ver dos lugares:</h2>
+ <a href= "https://www.youtube.com/watch?v=paTsVDhqX9Q" target= blank> Video Galápagos.</a>
+ <a href= "https://www.youtube.com/watch?v=YUm-ySBjHjE" target= blank> Video Atacama.</a>
+  <a href= "https://www.youtube.com/watch?v=UhYqGQ083jM" target= blank> Video Chicama.</a>
+</body>
+
+</html>
