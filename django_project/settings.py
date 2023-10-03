@@ -35,6 +35,7 @@ X_FRAME_OPTIONS = '*'
 # Application definition
 
 INSTALLED_APPS = [
+
   'django.contrib.admin',
   'django.contrib.auth',
   'django.contrib.contenttypes',
@@ -42,6 +43,7 @@ INSTALLED_APPS = [
   'django.contrib.messages',
   'django.contrib.staticfiles',
   'AppSophia',
+
 ]
 
 MIDDLEWARE = [
